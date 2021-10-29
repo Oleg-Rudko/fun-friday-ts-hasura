@@ -4,6 +4,11 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.4.16",
+    "@graphql-codegen/cli": "^2.2.1",
+    "@graphql-codegen/introspection": "^2.1.0",
+    "@graphql-codegen/typescript": "^2.2.4",
+    "@graphql-codegen/typescript-operations": "^2.1.8",
+    "@graphql-codegen/typescript-react-apollo": "^3.1.6",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -28,13 +33,24 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint-js": "eslint --ext .ts,.tsx ./src/ --fix",
+    "generate": "graphql-codegen --config codegen.js",
+    "y": "graphql-codegen --config codegen.yml"
+  },
+  "devDependencies": {
+    "@mate-academy/eslint-config-react-typescript": "*",
+    "@mate-academy/stylelint-config": "*",
+    "eslint": "^7.11.0",
+    "stylelint": "^13.0.0",
+    "@graphql-codegen/typescript": "2.2.4",
+    "@graphql-codegen/typescript-react-apollo": "3.1.6",
+    "@graphql-codegen/typescript-operations": "2.1.8",
+    "@graphql-codegen/introspection": "2.1.0",
+    "@graphql-codegen/cli": "2.2.1"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
